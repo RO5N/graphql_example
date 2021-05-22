@@ -1,0 +1,23 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@components": "./src/components",
+          "@services": "./src/services",
+          "@utils": "./src/utils",
+          "@types": "./types",
+          "@src": "./src"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  }
+}
