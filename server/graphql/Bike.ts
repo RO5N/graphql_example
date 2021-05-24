@@ -1,5 +1,5 @@
 import { getBikes } from '../data/bikes';
-import { Bike } from '../types/BikeTypes';
+import { Bike } from '../../types/BikeTypes';
 import { buildSchema } from 'graphql';
 import { graphqlHTTP } from 'express-graphql';
 

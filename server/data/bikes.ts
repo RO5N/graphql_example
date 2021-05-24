@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Bike } from '../types/BikeTypes';
+import { Bike } from 'types/BikeTypes';
 
 export const getBikes = async () => {
   var data: Bike[] = [];

@@ -1,6 +1,6 @@
 import React from 'react';
-import BikeTable from '@components/BikeTable';
+import SignIn from '@components/sign-in/SignIn';
 
 export default function Index(): JSX.Element {
-  return <BikeTable />;
+  return <SignIn />;
 }
