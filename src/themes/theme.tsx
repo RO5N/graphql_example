@@ -46,7 +46,6 @@ const theme = createMuiTheme({
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
-    htmlFontSize: 10, // Tell Material-UI what's the font-size on the html element is.
     h1: {
       color: '#3A3E68',
       fontWeight: 'bold',
