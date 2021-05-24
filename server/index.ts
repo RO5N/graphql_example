@@ -7,6 +7,9 @@ import passport from 'passport';
 import cors from 'cors';
 import { parse } from 'url';
 import ping from './routes/ping';
+import graphqlRoutes from './routes/graphqlRoutes';
+import bikes from './routes/bikes';
+import users from './routes/users';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -34,14 +37,16 @@ const handle = app.getRequestHandler();
 
   //API Routes
   server.use('/api/ping', ping);
+  server.use('/api/bikes', bikes);
+  server.use('/api/users', users);
+
+  //graphql route
+  server.use('/api/graphql', graphqlRoutes);
+
+  server.use('/data', bikes);
 
   //page routes
-  server.get('/', (req, res) => {
-    const parsedUrl = parse(req.url!, true);
-    return handle(req, res, parsedUrl);
-  });
-
-  server.get('/:page/:id?', (req, res) => {
+  server.get('*', (req, res) => {
     const parsedUrl = parse(req.url!, true);
     return handle(req, res, parsedUrl);
   });
