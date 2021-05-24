@@ -22,6 +22,15 @@ npm run build
 npm run dev
 ```
 
+User Name and Password
+
+```sh
+In this example no database is connected to the system.
+Therefore user details are hard coded.
+Try username/email: 'admin@admin.com' && password === '123'
+to access the dashboard.
+```
+
 ## Framework of the project
 
 [GraphQL](https://graphql.org) is a query language
