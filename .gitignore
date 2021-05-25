@@ -19,3 +19,4 @@ yarn-error.log*
 dist
 package-lock.json
 .vercel
+.env
